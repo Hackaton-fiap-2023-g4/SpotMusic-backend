@@ -42,7 +42,7 @@ jobs:
         run: |
           docker build -t ${{ vars.GOOGLE_ARTIFACT }}/${{ vars.GOOGLE_PROJECT_ID }}/${{ vars.GOOGLE_REPONAME }}/${{ vars.GOOGLE_MYAPP }}:latest .
           docker push ${{ vars.GOOGLE_ARTIFACT }}/${{ vars.GOOGLE_PROJECT_ID }}/${{ vars.GOOGLE_REPONAME }}/${{ vars.GOOGLE_MYAPP }}:latest
-Deploy-Homolog:
+  Deploy-Homolog:
     needs: Build
     runs-on: ubuntu-latest
 
@@ -65,6 +65,7 @@ Deploy-Homolog:
 
       - name: Test Homolog
         run: 'curl "${{ steps.homolog-deploy.outputs.url }}"'
+        
   Deploy-Production:
     needs: Deploy-Homolog
     runs-on: ubuntu-latest
