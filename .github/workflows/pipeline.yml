@@ -3,7 +3,7 @@ name: SpotMusic-backend Pipeline
 on: 
   push:
     branches:
-      - main
+      - feature/remove_old_pipeline_files
 jobs:
   Build:
     runs-on: ubuntu-latest
