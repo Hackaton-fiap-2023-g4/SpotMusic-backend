@@ -12,7 +12,7 @@ db_user = user-name
 db_password = user-pw
 db_name = my-database
 db_local_host = 10.90.160.3
-db_connection_name = grupo-04-384916:us-central1:database-instance
+#db_connection_name = grupo-04-384916:us-central1:database-instance
 
 
 
